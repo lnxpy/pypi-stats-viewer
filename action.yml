@@ -1,0 +1,32 @@
+name: PyPI Stats Viewer
+description: PyPI package stats to images in your README
+author: Sadra Yahyapour
+
+branding:
+  icon: bar-chart-2
+  color: gray-dark
+
+runs:
+  using: docker
+  image: Dockerfile
+
+inputs:
+  package:
+    required: true
+    description: package name
+  dimensions:
+    required: false
+    description: height and width of the output image
+    default: 1200x400
+  theme:
+    required: false
+    description: chart theme
+    default: plotly_white
+  title:
+    required: false
+    description: chart title
+    default: PyPI Package Stats
+  output:
+    required: true
+    description: output file
+    default: assets/stats.svg
