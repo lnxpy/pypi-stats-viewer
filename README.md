@@ -18,7 +18,7 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
         
-      - uses: lnxpy/pypi-stats-viewer@v1
+      - uses: lnxpy/pypi-stats-viewer@v2
         with:
           package: <package-name>
           dimensions: <size>
